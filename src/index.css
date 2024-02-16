@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+:root {
+  --white: #fff;
+  --dark: #242424;
+  --signature: #646cff;
+  --signature-light: #535bf2;
+}
+
+:root {
+  font-family: 'Nunito', sans-serif;
+  font-size: larger;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--white);
+  background-color: var(--dark);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  color: var(--white);
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+a {
+  font-weight: 500;
+  color: var(--signature);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--signature-light);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  font-family: "Orbitron", sans-serif;
+  width: fit-content;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  margin: 8px 0;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--signature);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--white);
+  margin: 0;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--signature);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+label {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.65em;
+}
+
+span {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.container {
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.word {
+  text-align: center;
+  font-size: 24px;
+}
+
+.clock {
+  font-family: "Orbitron", sans-serif;
+  width: 32px;
+  padding: 8px 18px;
+  border: 1px solid var(--white);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hit {
+  color: green;
+}
+
+.miss {
+  color: red;
+}
